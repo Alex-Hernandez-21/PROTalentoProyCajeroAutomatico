@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Component/operation/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Operaciones</title>
+</head>
+<body>
+    <h1>Operaciones BankDEV:F</h1>
+    
+    <div class="style-btn">
+        <button onclick=consultarSaldo()>Consultar Saldo</button>
+        <button onclick=getInto()>Ingresar Monto</button>
+        <button onclick=withdraw()>Retirar Monto</button>
+    </div>
+    
+<!-- modal para mostrar información en una ventana-->
+    <div id="none" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+        <div class="modal">
+            <div class="border-icon-three">
+                <i class='bx bxs-bank'></i>
+            </div>
+            <h2>Señor(a) <label id="user"></label></h2>            
+            <p>Su monto es de: </p><label id="texto_nav1"></label>
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+        </div>
+    </div>
+    
+    <div id="into" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+        <div class="modal">
+            <div class="border-icon-three">
+                <i class='bx bxs-bank'></i>
+            </div>
+            <h2>Ingrese el valor a consignar: </h2> 
+            <input type="number" placeholder="Ingrese el monto" id="num" name="num" value="">           
+            <button class="mod_btn" onclick=getIntoOperation()>Consignar</button>
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+        </div>
+    </div>
+
+    <div id="withdraw" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+        <div class="modal">
+            <div class="border-icon-three">
+                <i class='bx bxs-bank'></i>
+            </div>
+            <h2>Ingrese el valor a retirar: </h2> 
+            <input type="number" placeholder="Ingrese el monto" >           
+            
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+        </div>
+    </div>
+
+    <div class="message">
+        <button onclick=closeSesion() type="button" class="sign-up-btn">Cerrar Sesión</button>
+    </div>    
+
+    <script src="Component/operation/main.js"></script>
+</body>
+</html>

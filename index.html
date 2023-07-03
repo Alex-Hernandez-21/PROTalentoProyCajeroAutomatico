@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Component/login/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
+    <title>AHH Cajero</title>
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a BankDEV:F</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesión aquí</p>
+                <button class="sign-up-btn">Iniciar Sesión</button>
+            </div>
+        </div>
+        <form class="formulario">
+            <h2 class="style-title">Crear una cuenta</h2>
+            <div class="iconos">
+                <div class="border-icon-one">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon-one">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">Crear una cuenta gratis</p>
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Contraseña">
+            <input class="buttonsend" type="button" value="Registrarse">
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        <form name="formLogin" class="formulario">
+            <h2 class="style-title">Iniciar Sesión</h2>
+            <div class="iconos">
+                <div class="border-icon-two">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon-two">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <input type="text" placeholder="Usuario" id="username" name="username">
+            <input type="password" placeholder="Contraseña" id="password" name="password">
+            <input class="buttonsend" onclick=iniciar() type="button" value="Iniciar Sesión" id="button">
+
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a BankDEV:F</h2>
+                <p>Si no tienes una cuenta por favor registrese aquí</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+    </div>
+    <div id="none" style="display:none" class="modal-cont">   <!--id y style para mostrar y ocultar div-->>
+        <div class="modal">
+            <div class="border-icon-three">
+                <i class='bx bx-error'></i>
+            </div>
+            <h2>Incorrecto</h2>
+            <p>Su usuario o contraseña no es valido, intentalo de nuevo</p>
+            <button class="mod_btn" onclick=ocultar()>Cerrar</button>
+        </div>
+    </div>
+    
+    <script src="Component/login/app.js"></script>
+</body>
+</html>
