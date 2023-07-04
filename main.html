@@ -27,6 +27,17 @@
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  
         </div>
     </div>
+    <!-- modal transacción exitosa -->
+    <div id="actually" class="modal-cont none" >  
+        <div class="modal">
+            <div class="icon">
+                <i class='bx bxs-bank'></i>
+            </div>
+            <h2>Transacción Exitosa<label id="user"></label></h2>            
+            <p>Se ha actualizado su cuenta y su monto es: </p><label id="monto"></label>
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  
+        </div>
+    </div>
     
     <div id="consignar" class="modal-cont none" >  
         <div class="modal">
@@ -35,18 +46,19 @@
             </div>
             <h2>Ingrese el valor a consignar: </h2> 
             <input type="number" placeholder="Ingrese el monto" id="num" name="num" value="">           
-            <button class="mod_btn" id="sumar">Consignar</button>
+            <button class="mod_btn" id="sumar">Consignar Dinero</button>
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  
         </div>
     </div>
 
-    <div id="retirar" class="modal-cont none" >  <!--style, id para mostrar el div-->
+    <div id="retirar" class="modal-cont none" >  <!-- id para mostrar el div-->
         <div class="modal">
             <div class="icon">
                 <i class='bx bx-money-withdraw'></i>
             </div>
             <h2>Ingrese el valor a retirar: </h2> 
-            <input type="number" placeholder="Ingrese el monto" >           
+            <input type="number" placeholder="Ingrese el monto" id="num2" name="num2" value="">
+            <button class="mod_btn" id="restar">Retirar Dinero</button>           
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
         </div>
     </div>
