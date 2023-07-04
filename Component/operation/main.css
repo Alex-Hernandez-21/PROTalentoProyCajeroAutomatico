@@ -107,3 +107,28 @@ button:hover{
     transition: all .3s ease-in;
     color: #fff;
 }
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+    border: solid thin rgb(19, 19, 19);
+    border-radius: 50%;
+    padding: 1.4rem;
+}
+.modal input{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    padding: .6rem 0;
+    font-size: .9rem;
+    color: rgb(30, 26, 26);
+}

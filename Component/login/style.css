@@ -113,12 +113,15 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    border: solid thin rgb(32, 30, 30);
+    border: solid thin rgb(145, 69, 69);
     border-radius: 50%;
     font-size: 3.4rem;
     transition: all .3s ease-in;
 }
 
+.bx-error{
+    color: rgb(145, 69, 69);
+}
 .border-icon-one:hover {
     background-color: #4a4aee;
     cursor: pointer;
