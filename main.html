@@ -11,24 +11,24 @@
     <h1>Operaciones BankDEV:F</h1>
     
     <div class="style-btn">
-        <button onclick=consultarSaldo()>Consultar Saldo</button>
-        <button onclick=getInto()>Ingresar Monto</button>
-        <button onclick=withdraw()>Retirar Monto</button>
+        <button id="consultar" onclick=consultarSaldo()>Consultar Saldo</button>
+        <button  onclick=mostrarModalConsignar()>Ingresar Monto</button>
+        <button onclick=mostrarModalRetirar()>Retirar Monto</button>
     </div>
     
 <!-- modal para mostrar información en una ventana-->
-    <div id="none" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+    <div id="modal-detail" class="modal-cont none" >  
         <div class="modal">
             <div class="icon">
                 <i class='bx bxs-bank'></i>
             </div>
             <h2>Señor(a) <label id="user"></label></h2>            
             <p>Su monto es de: </p><label id="monto"></label>
-            <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  
         </div>
     </div>
     
-    <div id="into" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+    <div id="consignar" class="modal-cont none" >  
         <div class="modal">
             <div class="icon">
                 <i class='bx bxs-wallet-alt'></i>
@@ -36,18 +36,17 @@
             <h2>Ingrese el valor a consignar: </h2> 
             <input type="number" placeholder="Ingrese el monto" id="num" name="num" value="">           
             <button class="mod_btn" id="sumar">Consignar</button>
-            <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  
         </div>
     </div>
 
-    <div id="withdraw" style="display:none" class="modal-cont" >  <!--style, id para mostrar el div-->>
+    <div id="retirar" class="modal-cont none" >  <!--style, id para mostrar el div-->
         <div class="modal">
             <div class="icon">
                 <i class='bx bx-money-withdraw'></i>
             </div>
             <h2>Ingrese el valor a retirar: </h2> 
             <input type="number" placeholder="Ingrese el monto" >           
-            
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
         </div>
     </div>

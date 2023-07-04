@@ -132,3 +132,7 @@ button:hover{
     font-size: .9rem;
     color: rgb(30, 26, 26);
 }
+
+.none{
+    display: none;
+}

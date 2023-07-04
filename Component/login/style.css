@@ -231,3 +231,7 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+.none{
+    display: none;
+}

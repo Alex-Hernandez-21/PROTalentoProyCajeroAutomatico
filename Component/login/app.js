@@ -10,51 +10,28 @@ document.addEventListener('click', e => {
     }
 });
 
-// const username = document.getElementById("username");
-// const password = document.getElementById("password");
-// const button = document.getElementById("buttons");
-
-// button.addEventListener('click')
-
-// const button =document.getElementById("button");
-// const none =document.getElementById("none");
-// const mod_btn = document.getElementById("mod_btn");
+const cuentas =[
+    {"nombre":"Alexander","username":'alexander',"password":'1111','monto': 1000000},
+    {"nombre":"Johan","username": 'johan',"password":'2222', 'monto':2000000},
+    {"nombre":"Viviana","username": 'viviana',"password":'3333', 'monto': 3000000}
+    
+]
 
 function iniciar(){
-    let password=1111;
-    let user="alexander";
-    let password2=2222;
-    let user2="johan";
-    let password3=3333;
-    let user3="viviana";
-    
-    if (document.formLogin.password.value==password && (document.formLogin.username.value.toLowerCase())==user){
-        window.location="main.html";
-        localStorage.setItem("user", "alexander"); //crea variable en el localstore
-    }
-    else if (document.formLogin.password.value==password2 && (document.formLogin.username.value.toLowerCase())==user2){
-        window.location="main.html";
-        localStorage.setItem("user", "johan");
-    }
-    else if (document.formLogin.password.value==password3 && (document.formLogin.username.value.toLowerCase())==user3){
-        window.location="main.html";
-        localStorage.setItem("user", "viviana");
+    const username = document.formLogin.username.value;
+    const password = document.formLogin.password.value; 
+    let cuenta;
+
+    cuentas.forEach(acc => {
+        if (acc.username === username){
+            cuenta = acc;            
+        }
+    } ) 
+    if (password === cuenta.password && username.toLowerCase() === cuenta.username){
+          localStorage.setItem("user",  JSON.stringify(cuenta));
+          window.location="main.html";
     }else{
-        this.visible();
+        document.getElementById("login-error").classList.remove("none");
     }       
-    
 }
 
-// mod_btn.addEventListener('click', () =>{
-//     container_modal.classList.remove('show');
-// })
-
-function visible() {
-    document.getElementById("none").style.display="";
-    // document.getElementById("hide").style.visibility="";
-}
-
-function ocultar() {
-    document.getElementById("none").style.display="none"; 
-    // document.getElementById("hide").style.visibility="hidden";
-}
