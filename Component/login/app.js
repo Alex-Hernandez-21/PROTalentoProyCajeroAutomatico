@@ -38,6 +38,27 @@ function iniciar(){
     }       
 }
 
+// function iniciar(){
+//     var username = document.getElementById('username').value;
+//     var password = document.getElementById('password').value;
+//     let cuenta;
+
+//     console.log(username);
+//     console.log(password);
+
+//     var verify = !!cuentas.find(element => element.username === username && element.password === password);
+
+//     console.log(verify);
+
+//     if (verify) {
+//         localStorage.setItem("user", JSON.stringify(cuenta));
+//         window.location = 'main.html';
+        
+//       } else {
+//         document.getElementById("login-error").classList.remove("none"); 
+//       }
+// }
+
 function ocultar() {
     document.getElementById("login-error").classList.add("none");
 }
