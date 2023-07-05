@@ -34,7 +34,7 @@ function iniciar(){
           localStorage.setItem("user", JSON.stringify(cuenta));
           window.location="main.html";
     }else{
-        document.getElementById("login-error").classList.remove("none");
+        document.getElementById('login-error').classList.remove("none");
     }       
 }
 
