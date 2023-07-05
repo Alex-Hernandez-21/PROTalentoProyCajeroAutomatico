@@ -29,12 +29,12 @@ function iniciar(){
         if (acc.username === username){
             cuenta = acc;            
         }
-    } ) 
-    if (password === cuenta.password && username.toLowerCase() === cuenta.username){
-          localStorage.setItem("user", JSON.stringify(cuenta));
-          window.location="main.html";
+    } )
+    if (password === cuenta.password && (username.toLowerCase()) === cuenta.username){
+        localStorage.setItem("user", JSON.stringify(cuenta));
+        window.location="main.html";
     }else{
-        document.getElementById('login-error').classList.remove("none");
+        document.getElementById("login-error").classList.remove("none");   
     }       
 }
 

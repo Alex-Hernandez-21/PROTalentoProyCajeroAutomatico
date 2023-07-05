@@ -27,18 +27,7 @@
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  
         </div>
     </div>
-    <!-- modal transacción exitosa -->
-    <div id="actually" class="modal-cont none" >  
-        <div class="modal">
-            <div class="icon">
-                <i class='bx bxs-bank'></i>
-            </div>
-            <h2>Transacción Exitosa<label id="user"></label></h2>            
-            <p>Se ha actualizado su cuenta y su monto es: </p><label id="monto"></label>
-            <button class="mod_btn" onclick=ocultar()>Regresar</button>  
-        </div>
-    </div>
-    
+        
     <div id="consignar" class="modal-cont none" >  
         <div class="modal">
             <div class="icon">
@@ -60,6 +49,31 @@
             <input type="number" placeholder="Ingrese el monto" id="num2" name="num2" value="">
             <button class="mod_btn" id="restar">Retirar Dinero</button>           
             <button class="mod_btn" onclick=ocultar()>Regresar</button>  <!-- onclick para ocultar el div-->
+        </div>
+    </div>
+
+    <!-- modal transacción exitosa -->
+    <div id="actually" class="modal-cont none" >  
+        <div class="modal">
+            <div class="icon">
+                <i class='bx bxs-bank'></i>
+            </div>
+            <h2>Transacción Exitosa</h2><br>           
+            <p>Se ha actualizado su cuenta</p>
+            <p>su nuevo monto es: </p><label id="monto-1"></label>
+            <button class="mod_btn" onclick=ocultar()>Regresar</button>  
+        </div>
+    </div>
+
+    <!-- modal transacción errada -->
+    <div id="wrong" class="modal-cont none" >  
+        <div class="modal">
+            <div class="icon">
+                <i class='bx bx-money-withdraw'></i>
+            </div>
+            <h2>Transacción Errada<label id="user"></label></h2>            
+            <p>"No tienes suficiente dinero en tu cuenta."</p>
+            <button class="mod_btn" onclick=ocultar()>Intentar de nuevo!</button>  
         </div>
     </div>
 

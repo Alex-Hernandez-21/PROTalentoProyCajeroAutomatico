@@ -29,6 +29,7 @@ function consignar(){
     localStorage.setItem("user", JSON.stringify(cuenta));
     document.getElementById("consignar").classList.add("none");
     document.getElementById("actually").classList.remove("none");
+    document.getElementById('monto-1').innerHTML = cuenta.monto; 
     console.log(cuenta); 
 }
 
@@ -39,11 +40,18 @@ let newMontos = document.getElementById("monto");
 btnRestar.addEventListener('click', retirar);
 
 function retirar(){
-    let num2 = parseFloat(document.getElementById('num2').value); 
-    cuenta.monto -= num2; 
-    localStorage.setItem("user", JSON.stringify(cuenta));
-    document.getElementById("retirar").classList.add("none");
-    console.log(cuenta); 
+    let num2 = parseFloat(document.getElementById('num2').value);
+    if(num2 > cuenta.monto){
+        document.getElementById("retirar").classList.add("none");
+        document.getElementById("wrong").classList.remove("none");
+    }else{
+        cuenta.monto -= num2; 
+        localStorage.setItem("user", JSON.stringify(cuenta));
+        document.getElementById("retirar").classList.add("none");
+        document.getElementById("actually").classList.remove("none");
+        document.getElementById('monto-1').innerHTML = cuenta.monto;
+        console.log(cuenta); 
+    }
 }
 
 //-----función para ocultar los modal
@@ -52,6 +60,7 @@ function ocultar() {
     document.getElementById("consignar").classList.add("none");
     document.getElementById("retirar").classList.add("none");
     document.getElementById("actually").classList.add("none");
+    document.getElementById("wrong").classList.add("none");
 }
 
 //-----Función para cerrar sesión
